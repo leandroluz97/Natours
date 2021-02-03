@@ -3,20 +3,35 @@
   padding: 10rem 0;
   font-size: 1.4rem;
 
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
+
   &__logo-box {
+    text-align: center;
   }
 
   &__logo {
-    width: 10rem;
+    width: 15rem;
     height: auto;
   }
 
   &__navigation {
     border-top: solid 1px $color-grey-dark;
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
   &__list {
     list-style: none;
+    padding-top: 1rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__item {
@@ -47,8 +62,13 @@
   }
   &__copyright {
     border-top: solid 1px $color-grey-dark;
-    display: inline-block;
+    padding-top: 1rem;
     width: 80%;
     float: right;
+
+    @include respond(tab-port) {
+      float: none;
+      width: 100%;
+    }
   }
 }
